@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Post = () => {
+const Post = ({postName="no title", postBody="no content has been provided"}) => {
   return (
     <div style={{padding :"10px", border:"5px solid teal", margin:"25px"}}>
-        <h1 >This is the post title</h1>
+        <h2 >{postName}</h2>
         <hr />
-        <p>This is the post content.</p>
+        <p>{postBody}</p>
     </div>
   )
 }
