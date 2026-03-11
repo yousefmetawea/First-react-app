@@ -3,7 +3,28 @@ import Sidemenue from './Sidemenue';
 import Post from './Post';
 
 function App() {
+
+  const posts= [
+      {
+        id :"1" ,
+        postName:"yousef hazem",
+        postBody:"yeh that is right "
+      },
+      {
+        id :"2" ,
+        postName:"study react",
+        postBody:"second post content "
+      },{
+        id :"3" ,
+        postName:"yousef hazem",
+        postBody:"third post content "
+      },
+    ]
+    const PostList=posts.map((post)=>{
+      return <Post key={post.id} postName={post.postName} postBody={post.postBody} />
+    })
   return (
+    
     <div className="App">
       <Header />
       <div style={{display:"flex", justifyContent:"center"}}>
@@ -12,11 +33,8 @@ function App() {
 
       {/* start of post  container */}
       <div style={{width:"70%"}}>
-        <Post postName="yousef hazem" postBody="yeh that is right "/>
-        <Post postName="study  react" postBody="second post content"/>
-        <Post postName="third title" postBody="third post content"/>
-        <Post />
-        <Post />
+        {PostList}
+
 
       </div>
         {/* end of post  container */}
